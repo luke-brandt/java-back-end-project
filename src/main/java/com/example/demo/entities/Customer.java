@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 import java.util.Date;
@@ -17,19 +18,19 @@ public class Customer {
     @Column(name="customer_id")
     private Long id;
 
-    @Column(name="customer_first_name")
+    @Column(name="customer_first_name", nullable = false)
     private String firstName;
 
-    @Column(name="customer_last_name")
+    @Column(name="customer_last_name", nullable = false)
     private String lastName;
 
-    @Column(name="address")
+    @Column(name="address", nullable = false)
     private String address;
 
-    @Column(name="postal_code")
+    @Column(name="postal_code", nullable = false)
     private String postalCode;
 
-    @Column(name="phone")
+    @Column(name="phone", nullable = false)
     private String phone;
 
     @Column(name="create_date")
