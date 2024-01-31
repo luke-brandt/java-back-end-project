@@ -22,7 +22,7 @@ public class Vacation {
     private Long id;
 
     @Column(name="vacation_title")
-    private String vacationTitle;
+    private String vacation_title;
 
     @Column(name="description")
     private String description;
