@@ -7,7 +7,7 @@ public class PurchaseResponse {
 
     private String orderTrackingNumber;
 
-    public PurchaseResponse(String orderTrackingNumber){
+    public PurchaseResponse(String orderTrackingNumber) {
         this.orderTrackingNumber = orderTrackingNumber;
     }
 }
