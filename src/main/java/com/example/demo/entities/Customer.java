@@ -28,7 +28,7 @@ public class Customer {
     private String address;
 
     @Column(name="postal_code", nullable = false)
-    private String postalCode;
+    private String postal_code;
 
     @Column(name="phone", nullable = false)
     private String phone;
@@ -46,6 +46,16 @@ public class Customer {
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Cart> carts;
 
+    public Customer() {
+    }
 
+    public Customer(String firstName, String lastName, String address, String postalCode, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.postal_code = postalCode;
+        this.phone = phone;
+        this.create_date = new Date();
+    }
 
 }
